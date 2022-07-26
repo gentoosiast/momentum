@@ -1,4 +1,4 @@
-const mode =
+const devMode =
   process.env.NODE_ENV === 'production' ? 'production' : 'development';
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -9,7 +9,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const WebpackPWAManifestPlugin = require('webpack-pwa-manifest');
 
 module.exports = {
-  mode,
+  mode: devMode,
   devtool: 'eval',
   entry: ['./src/index.js', './src/sass/main.scss'],
   output: {
@@ -26,9 +26,9 @@ module.exports = {
       overlay: true,
       progress: true,
     },
-    static: {
-      directory: path.resolve(__dirname, 'dist'),
-    },
+    // static: {
+    //   directory: path.resolve(__dirname, 'dist'),
+    // },
   },
   plugins: [
     new CopyPlugin({
@@ -66,18 +66,9 @@ module.exports = {
         test: /\.s?css$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: MiniCSSExtractPlugin.loader,
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-          },
+          devMode ? 'style-loader' : MiniCSSExtractPlugin,
+          'css-loader',
+          'postcss-loader',
         ],
       },
       {
