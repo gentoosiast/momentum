@@ -2,6 +2,7 @@ const postCssConfig = {
   syntax: 'postcss-scss',
   plugins: {
     autoprefixer: {},
+    'postcss-normalize': {},
     '@csstools/postcss-sass': {},
   },
 };
