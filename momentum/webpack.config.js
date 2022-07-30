@@ -19,16 +19,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
-    hot: true,
     open: true,
     port: 5333,
     client: {
       overlay: true,
       progress: true,
     },
-    // static: {
-    //   directory: path.resolve(__dirname, 'dist'),
-    // },
+    liveReload: true,
+    watchFiles: ['src/*.html'],
   },
   plugins: [
     new CopyPlugin({
