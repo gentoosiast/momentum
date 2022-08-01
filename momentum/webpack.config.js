@@ -10,7 +10,7 @@ const WebpackPWAManifestPlugin = require('webpack-pwa-manifest');
 
 module.exports = {
   mode: devMode,
-  devtool: 'eval',
+  devtool: devMode === 'production' ? 'source-map' : 'eval-source-map',
   entry: ['./src/index.js', './src/sass/main.scss'],
   output: {
     clean: true,
