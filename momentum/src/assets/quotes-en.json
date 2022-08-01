@@ -1,0 +1,202 @@
+[
+  {
+    "text": "Don’t comment bad code – rewrite it",
+    "author": "Brian Kernighan"
+  },
+  {
+    "text": "A programming language is for thinking about programs, not for expressing programs you’ve already thought of. It should be a pencil, not a pen",
+    "author": "Paul Graham"
+  },
+  {
+    "text": "The computer was born to solve problems that did not exist before",
+    "author": "Bill Gates"
+  },
+  {
+    "text": "Any fool can use a computer. Many do",
+    "author": "Ted Nelson"
+  },
+  {
+    "text": "Programs must be written for people to read, and only incidentally for machines to execute",
+    "author": "Harold Abelson"
+  },
+  {
+    "text": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand",
+    "author": "Martin Fowler"
+  },
+  {
+    "text": "I’m not a great programmer; I’m just a good programmer with great habits",
+    "author": "Kent Beck"
+  },
+  {
+    "text": "It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free",
+    "author": "Steve McConnell"
+  },
+  {
+    "text": "Programming isn’t about what you know; it’s about what you can figure out",
+    "author": "Chris Pine"
+  },
+  {
+    "text": "The only way to learn a new programming language is by writing programs in it",
+    "author": "Dennis Ritchie"
+  },
+  {
+    "text": "I had a running compiler and nobody would touch it. ... they carefully told me, computers could only do arithmetic; they could not do programs",
+    "author": "Grace Hopper"
+  },
+  {
+    "text": "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program",
+    "author": "Linus Torvalds"
+  },
+  {
+    "text": "Intelligence is the ability to avoid doing work, yet getting the work done",
+    "author": "Linus Torvalds"
+  },
+  {
+    "text": "The box contains us. The box contains everything. And inside the box, is another box",
+    "author": "Stewart (\"Devs\" TV Series)"
+  },
+  {
+    "text": "Life is just something we watch unfold",
+    "author": "Forest (\"Devs\" TV Series)"
+  },
+  {
+    "text": "You know the problem with people who run tech companies?\nThey have too much power",
+    "author": "Jamie (\"Devs\" TV Series)"
+  },
+  {
+    "text": "You can't name a random event. Because there are no random events",
+    "author": "Katie (\"Devs\" TV Series)"
+  },
+  {
+    "text": "Cause precedes effect. Effect leads to cause",
+    "author": "Katie (\"Devs\" TV Series)"
+  },
+  {
+    "text": "Forest: Everything we do is predicated on the idea that we live in a physical universe, not a magical universe.\nKatie: Are you doubting that?\nForest: Not the physical universe. But I am scared we might be magicians",
+    "author": "\"Devs\" TV Series"
+  },
+  {
+    "text": "Computers are incredibly fast, accurate, and stupid. Human beings are incredibly slow, inaccurate, and brilliant. Together they are powerful beyond imagination",
+    "author": "Albert Einstein"
+  },
+  {
+    "text": "Everybody should learn to program a computer, because it teaches you how to think",
+    "author": "Steve Jobs"
+  },
+  {
+    "text": "Computers are good at following instructions, but not at reading your mind",
+    "author": "Donald Knuth"
+  },
+  {
+    "text": "Computer Science is no more about computers than astronomy is about telescopes",
+    "author": "Edsger W. Dijkstra"
+  },
+  {
+    "text": "In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them",
+    "author": "Andrew Hunt"
+  },
+  {
+    "text": "I taught myself how to program computers when I was a kid, bought my first computer when I was 10, and sold my first commercial program when I was 12",
+    "author": "Elon Musk"
+  },
+  {
+    "text": "Programming is learned by writing programs",
+    "author": "Brian Kernighan"
+  },
+  {
+    "text": "Talk is cheap. Show me the code",
+    "author": "Linus Torvalds"
+  },
+  {
+    "text": "An algorithm must be seen to be believed",
+    "author": "Donald Knuth"
+  },
+  {
+    "text": "Beware of bugs in the above code; I have only proved it correct, not tried it",
+    "author": "Donald Knuth"
+  },
+  {
+    "text": "Science is what we understand well enough to explain to a computer; art is everything else",
+    "author": "Donald Knuth"
+  },
+  {
+    "text": "One man's constant is another man's variable",
+    "author": "Alan Perlis"
+  },
+  {
+    "text": "Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it",
+    "author": "Alan Perlis"
+  },
+  {
+    "text": "It is easier to write an incorrect program than understand a correct one",
+    "author": "Alan Perlis"
+  },
+  {
+    "text": "There are two ways to write error-free programs; only the third one works",
+    "author": "Alan Perlis"
+  },
+  {
+    "text": "A language that doesn't affect the way you think about programming is not worth knowing.",
+    "author": "Alan Perlis"
+  },
+  {
+    "text": "On two occasions, I have been asked [by members of Parliament], 'Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?' I am not able to rightly apprehend the kind of confusion of ideas that could provoke such a question",
+    "author": "Charles Babbage"
+  },
+  {
+    "text": "The most disastrous thing that you can ever learn is your first programming language",
+    "author": "Alan Kay"
+  },
+  {
+    "text": "The most important property of a program is whether it accomplishes the intention of its user",
+    "author": "C.A.R. Hoare"
+  },
+  {
+    "text": "Learning the art of programming, like most other disciplines, consists of first learning the rules and then learning when to break them",
+    "author": "Joshua Bloch"
+  },
+  {
+    "text": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
+    "author": "Brian Kernighan"
+  },
+  {
+    "text": "Don't gloss over a routine or piece of code involved in the bug because you \"know\" it works. Prove it. Prove it in this context, with this data, with these boundary conditions",
+    "author": "Andrew Hunt"
+  },
+  {
+    "text": "Testing can only prove the presence of bugs, not their absence",
+    "author": "Edsger W. Dijkstra"
+  },
+  {
+    "text": "Everyday life is like programming, I guess. If you love something you can put beauty on it",
+    "author": "Donald Knuth"
+  },
+  {
+    "text": "Some people, when confronted with a problem, think ‘I know, I'll use regular expressions.’ Now they have two problems",
+    "author": "Jamie Zawinski"
+  },
+  {
+    "text": "Delivering good software today is often better than perfect software tomorrow, so finish things and ship",
+    "author": "David Thomas"
+  },
+  {
+    "text": "I'm a programmer. I like programming. And the best way I've found to have a positive impact on code is to write it",
+    "author": "Robert C. Martin"
+  },
+  {
+    "text": "The big optimizations come from refining the high-level design, not the individual routines",
+    "author": "Steve McConnell"
+  },
+  {
+    "text": "So if an algorithm is an idealized recipe, a program is the detailed set of instructions for a cooking robot preparing a month of meals for an army while under enemy attack",
+    "author": "Brian Kernighan"
+  },
+  {
+    "text": "Simple things should be simple, complex things should be possible",
+    "author": "Alan Kay"
+  },
+  {
+    "text": "It is not only the violin that shapes the violinist, we are all shaped by the tools we train ourselves to use, and in this respect programming languages have a devious influence: they shape our thinking habits",
+    "author": "Edsger W. Dijkstra"
+  }
+]
