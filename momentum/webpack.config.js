@@ -67,7 +67,9 @@ module.exports = {
         test: /\.s?css$/,
         exclude: /node_modules/,
         use: [
-          devMode ? 'style-loader' : MiniCSSExtractPlugin,
+          devMode === 'production'
+            ? MiniCSSExtractPlugin.loader
+            : 'style-loader',
           'css-loader',
           'postcss-loader',
         ],
