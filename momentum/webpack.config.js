@@ -14,8 +14,8 @@ module.exports = {
   entry: ['./src/index.js', './src/sass/main.scss'],
   output: {
     clean: true,
-    filename: '[name].[hash].js',
-    assetModuleFilename: './assets/[name].[hash][ext][query]',
+    filename: '[name].[contenthash].js',
+    assetModuleFilename: './assets/[name].[contenthash][ext][query]',
     path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
