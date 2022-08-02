@@ -11,4 +11,8 @@ export default {
       targetElement.style.backgroundImage = `url('${img.src}')`;
     });
   },
+
+  getCountryCode(locale = 'en-US') {
+    return locale.slice(0, 2);
+  },
 };
