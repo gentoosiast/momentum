@@ -14,8 +14,38 @@
       rel="apple-touch-icon"
       href="<%= require('./assets/apple-touch-icon.png') %>"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=PT+Sans+Narrow:wght@400;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
     <title>Momentum by Sergey Koksharov</title>
   </head>
   <body>
+    <div class="grid-container">
+      <header class="header"></header>
+      <main class="main">
+        <div class="chevron-icons">
+          <button class="chevron chevron-left"></button>
+          <button class="chevron chevron-right"></button>
+        </div>
+        <div class="date-widget">
+          <time class="date-widget__clock"></time>
+          <p class="date-widget__calendar"></p>
+          <div class="greeting">
+            <span class="greeting-text"></span
+            ><input class="greeting-name" type="text" size="10" />
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="quote">
+          <p class="quote__text"></p>
+          <p class="quote__author"></p>
+          <button class="quote__reload"></button>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,0 +1,52 @@
+@use 'sass:color';
+
+.date-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-widget__clock {
+  margin-bottom: 10px;
+  color: $light-color;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 100px;
+  text-shadow: 2px 2px 0 color.mix($light-color, #000, 40%);
+  user-select: none;
+}
+
+.date-widget__calendar {
+  @extend %text-outline;
+
+  margin: 0 0 15px;
+  color: $light-color;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 48px;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+}
+
+.greeting-text {
+  @extend %text-outline;
+
+  margin-right: 10px;
+  color: $light-color;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 56px;
+}
+
+.greeting-name {
+  @extend %text-outline;
+
+  padding-left: 5px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  background-color: transparent;
+  border-radius: 10px;
+  color: $light-color;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 56px;
+}

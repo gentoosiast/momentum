@@ -1,0 +1,41 @@
+@use 'sass:color';
+
+.footer {
+  grid-area: footer;
+}
+
+.quote {
+  display: flex;
+  max-width: 800px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.quote__text {
+  @extend %text-outline;
+
+  margin: 0 auto 10px;
+  color: $light-color;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.quote__author {
+  @extend %text-outline;
+
+  margin: 0 auto 10px;
+  color: color.mix(#000, $light-color, 10%);
+  text-align: center;
+}
+
+.quote__reload {
+  width: 48px;
+  height: 48px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/reload.svg');
+  cursor: pointer;
+}
