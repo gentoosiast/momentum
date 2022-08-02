@@ -2,7 +2,7 @@ export default {
   getTime(locale = 'en-US') {
     const date = new Date();
     // https://stackoverflow.com/questions/68646411/date-tolocalestringen-us-hour12-false-is-providing-midnight-as-24
-    const options = { hour12: false, hourCycle: 'h23' }; // task requirements
+    const options = { hourCycle: 'h23' }; // task requirements
 
     return date.toLocaleTimeString(locale, options);
   },
