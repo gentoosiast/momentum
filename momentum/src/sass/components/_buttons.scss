@@ -24,3 +24,20 @@
   background-color: transparent;
   background-image: url('../assets/chevron-right.svg');
 }
+
+.settings-button {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  width: 32px;
+  height: 32px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/gear.svg');
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: rotate(30deg);
+  }
+}

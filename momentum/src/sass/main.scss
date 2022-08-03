@@ -4,11 +4,11 @@
 @import 'abstracts/placeholders';
 
 @import 'base/base';
+@import 'base/typography';
 
 @import 'layout/grid';
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/footer';
 
-@import 'components/chevron';
+@import 'components/buttons';
 @import 'components/date-widget';
+@import 'components/greeting-widget';
+@import 'components/quote-widget';

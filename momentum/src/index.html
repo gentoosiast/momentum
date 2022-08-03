@@ -23,29 +23,25 @@
     <title>Momentum by Sergey Koksharov</title>
   </head>
   <body>
-    <div class="grid-container">
-      <header class="header"></header>
-      <main class="main">
-        <div class="chevron-icons">
-          <button class="chevron chevron-left"></button>
-          <button class="chevron chevron-right"></button>
-        </div>
-        <div class="date-widget">
-          <time class="date-widget__clock"></time>
-          <p class="date-widget__calendar"></p>
-          <div class="greeting">
-            <span class="greeting-text"></span
-            ><input class="greeting-name" type="text" size="10" />
-          </div>
-        </div>
-      </main>
-      <footer class="footer">
-        <div class="quote">
-          <p class="quote__text"></p>
-          <p class="quote__author"></p>
-          <button class="quote__reload"></button>
-        </div>
-      </footer>
-    </div>
+    <main class="main grid-container">
+      <button class="settings-button"></button>
+      <div class="chevron-icons">
+        <button class="chevron chevron-left"></button>
+        <button class="chevron chevron-right"></button>
+      </div>
+      <div class="date-widget">
+        <time class="date-widget__clock"></time>
+        <p class="date-widget__calendar"></p>
+      </div>
+      <div class="greeting-widget">
+        <span class="greeting-widget__text"></span
+        ><input class="greeting-widget__name" type="text" size="10" />
+      </div>
+      <div class="quote-widget">
+        <p class="quote-widget__text"></p>
+        <p class="quote-widget__author"></p>
+        <button class="quote-widget__reload"></button>
+      </div>
+    </main>
   </body>
 </html>

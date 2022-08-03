@@ -1,7 +1,14 @@
 .grid-container {
   display: grid;
   height: 100vh;
-  grid-template-areas: 'header' 'main' 'footer';
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(100px, 300px) 1fr minmax(50px, auto);
+  grid-template-areas:
+    'audio . weather'
+    'date date date'
+    'greeting greeting greeting'
+    'quote quote quote';
+  grid-template-columns: minmax(100px, 300px) 1fr minmax(100px, 300px);
+  grid-template-rows: minmax(100px, 300px) min-content min-content minmax(
+      50px,
+      auto
+    );
 }
