@@ -24,4 +24,20 @@ export default {
     };
     return placeholder[locale];
   },
+
+  getWeatherLabel(locale = 'en-US') {
+    const label = {
+      'en-US': {
+        humidity: 'Humidity',
+        windSpeed: 'Wind Speed',
+        windSpeedUnits: 'm/s',
+      },
+      'ru-RU': {
+        humidity: 'Влажность воздуха',
+        windSpeed: 'Скорость ветра',
+        windSpeedUnits: 'м/с',
+      },
+    };
+    return label[locale];
+  },
 };
