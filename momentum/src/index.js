@@ -4,6 +4,7 @@ import i18n from './js/i18n';
 import imagesGitHub from './js/images-github';
 import utils from './js/utils';
 import quotes from './js/quotes';
+import weather from './js/weather';
 
 let settings;
 
@@ -14,9 +15,12 @@ const greeting = document.querySelector('.greeting-text');
 const greetingInput = document.querySelector('.greeting-name');
 const chevronLeft = document.querySelector('.chevron-left');
 const chevronRight = document.querySelector('.chevron-right');
-const quoteText = document.querySelector('.quote__text');
-const quoteAuthor = document.querySelector('.quote__author');
-const quoteButton = document.querySelector('.quote__reload');
+const weatherInput = document.querySelector('.weather-widget__input');
+const weatherIcon = document.querySelector('.weather-widget__icon');
+const weatherTemp = document.querySelector('.weather-widget__temp');
+const weatherDesc = document.querySelector('.weather-widget__desc');
+const weatherWind = document.querySelector('.weather-widget__wind');
+const weatherHumidity = document.querySelector('.weather-widget__humidity');
 
 function updateCalendar(date) {
   calendar.textContent = datetime.getDate(date, settings.locale);
@@ -70,6 +74,54 @@ function initQuotes(locale = 'en-US') {
     });
 }
 
+function updateWeatherWidget(result) {
+  if (result.cod === '404' && result.message === 'city not found') {
+    weatherIcon.className = 'weather-widget__icon owi';
+    weatherTemp.textContent = '';
+    weatherDesc.textContent = i18n.getWeatherLabel(
+      settings.locale
+    ).cityNotFound;
+    weatherWind.textContent = '';
+    weatherHumidity.textContent = '';
+  } else {
+    const { icon, description: desc } = result.weather[0];
+    const temp = Math.round(result.main.temp);
+    const windSpeed = Math.round(result.wind.speed);
+    const { humidity } = result.main;
+
+    weatherIcon.className = 'weather-widget__icon owi';
+    weatherIcon.classList.add(`owi-${icon}`);
+    weatherTemp.textContent = `${temp}°C`;
+    weatherDesc.textContent = desc;
+    weatherWind.textContent = `${
+      i18n.getWeatherLabel(settings.locale).windSpeed
+    }: ${windSpeed} ${i18n.getWeatherLabel(settings.locale).windSpeedUnits}`;
+    weatherHumidity.textContent = `${
+      i18n.getWeatherLabel(settings.locale).humidity
+    }: ${humidity}%`;
+  }
+}
+
+function updateWeather() {
+  const interval = 1000 * 60 * 25; // 25 minutes
+  if (
+    settings.city !== sessionStorage.getItem('weatherCity') ||
+    Date.now() > Number(sessionStorage.getItem('weatherLastRequest') + interval)
+  ) {
+    weather
+      .getWeather(settings.city, utils.getCountryCode(settings.locale))
+      .then((data) => {
+        sessionStorage.setItem('weatherLastRequest', Date.now().toString());
+        sessionStorage.setItem('weatherCity', settings.city);
+        sessionStorage.setItem('weatherData', JSON.stringify(data));
+        updateWeatherWidget(data);
+      });
+  } else {
+    const data = JSON.parse(sessionStorage.getItem('weatherData'));
+    updateWeatherWidget(data);
+  }
+}
+
 function init() {
   const date = new Date();
   settings = state.load();
@@ -81,6 +133,8 @@ function init() {
   updateGreetingName(settings.userName);
   initQuotes(settings.locale);
   utils.setBg(body, imagesGitHub.getBackgroundURL());
+  weatherInput.value = settings.city;
+  updateWeather();
 }
 
 globalThis.addEventListener('load', () => {
@@ -106,6 +160,30 @@ greetingInput.addEventListener('keydown', (e) => {
   } else if (e.key === 'Escape') {
     greetingInput.value = settings.userName;
     greetingInput.blur();
+  }
+});
+
+weatherInput.addEventListener('focus', () => {
+  weatherInput.value = '';
+});
+
+weatherInput.addEventListener('blur', () => {
+  const city = weatherInput.value;
+  if (city) {
+    settings.city = city;
+    localStorage.setItem('city', city);
+    updateWeather();
+  } else {
+    weatherInput.value = settings.city;
+  }
+});
+
+weatherInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === 'NumpadEnter') {
+    weatherInput.blur();
+  } else if (e.key === 'Escape') {
+    weatherInput.value = settings.city;
+    weatherInput.blur();
   }
 });
 

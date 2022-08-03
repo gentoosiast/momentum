@@ -1,0 +1,50 @@
+.weather-widget {
+  @extend %text-outline;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+  grid-area: weather;
+  justify-self: end;
+}
+
+.weather-widget__input {
+  border: unset;
+  border-bottom: 1px solid $light-color;
+  background-color: transparent;
+  color: $light-color;
+  font-size: 24px;
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+.weather-widget__icon-temp {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.weather-widget__icon {
+  padding-right: 10px;
+  font-size: 48px;
+}
+
+.weather-widget__temp {
+  font-size: 32px;
+}
+
+.weather-widget__desc {
+  margin: 0 0 10px;
+}
+
+.weather-widget__wind {
+  margin: 0 0 10px;
+}
+
+.weather-widget__humidity {
+  margin: 0;
+}

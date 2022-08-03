@@ -31,11 +31,13 @@ export default {
         humidity: 'Humidity',
         windSpeed: 'Wind Speed',
         windSpeedUnits: 'm/s',
+        cityNotFound: 'ERROR: City not found',
       },
       'ru-RU': {
         humidity: 'Влажность воздуха',
         windSpeed: 'Скорость ветра',
         windSpeedUnits: 'м/с',
+        cityNotFound: 'ОШИБКА: город не найден',
       },
     };
     return label[locale];
