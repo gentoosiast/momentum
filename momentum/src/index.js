@@ -11,10 +11,13 @@ let settings;
 const body = document.querySelector('body');
 const clock = document.querySelector('.date-widget__clock');
 const calendar = document.querySelector('.date-widget__calendar');
-const greeting = document.querySelector('.greeting-text');
-const greetingInput = document.querySelector('.greeting-name');
+const greeting = document.querySelector('.greeting-widget__text');
+const greetingInput = document.querySelector('.greeting-widget__name');
 const chevronLeft = document.querySelector('.chevron-left');
 const chevronRight = document.querySelector('.chevron-right');
+const quoteText = document.querySelector('.quote-widget__text');
+const quoteAuthor = document.querySelector('.quote-widget__author');
+const quoteButton = document.querySelector('.quote-widget__reload');
 const weatherInput = document.querySelector('.weather-widget__input');
 const weatherIcon = document.querySelector('.weather-widget__icon');
 const weatherTemp = document.querySelector('.weather-widget__temp');
@@ -52,8 +55,8 @@ function setGreetingPlaceholder() {
   greetingInput.placeholder = i18n.getNamePlaceholder(settings.locale);
 }
 
-function updateGreetingName(name) {
-  settings.userName = name;
+function setGreetingName(name) {
+  greetingInput.value = name;
 }
 
 function updateQuote() {
@@ -130,7 +133,7 @@ function init() {
   updateCalendar(date);
   updateGreeting(date);
   setGreetingPlaceholder();
-  updateGreetingName(settings.userName);
+  setGreetingName(settings.userName);
   initQuotes(settings.locale);
   utils.setBg(body, imagesGitHub.getBackgroundURL());
   weatherInput.value = settings.city;
@@ -148,7 +151,8 @@ greetingInput.addEventListener('focus', () => {
 greetingInput.addEventListener('blur', () => {
   const name = greetingInput.value;
   if (name) {
-    updateGreetingName(name);
+    settings.userName = name;
+    localStorage.setItem('userName', name);
   } else {
     greetingInput.value = settings.userName;
   }
