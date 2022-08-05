@@ -17,12 +17,14 @@
   left: 25px;
   background-color: transparent;
   background-image: url('../assets/chevron-left.svg');
+  background-repeat: no-repeat;
 }
 
 .chevron-right {
   right: 25px;
   background-color: transparent;
   background-image: url('../assets/chevron-right.svg');
+  background-repeat: no-repeat;
 }
 
 .settings-button {
@@ -34,6 +36,7 @@
   border: unset;
   background-color: transparent;
   background-image: url('../assets/gear.svg');
+  background-repeat: no-repeat;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
 
