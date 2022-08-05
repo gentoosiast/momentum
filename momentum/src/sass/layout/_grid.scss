@@ -1,12 +1,13 @@
 .grid-container {
   display: grid;
   height: 100vh;
+  padding: 10px;
   grid-template-areas:
     'audio . weather'
     'date date date'
     'greeting greeting greeting'
     'quote quote quote';
-  grid-template-columns: minmax(100px, 300px) 1fr minmax(100px, 300px);
+  grid-template-columns: minmax(100px, 320px) 1fr minmax(100px, 320px);
   grid-template-rows: minmax(100px, 300px) min-content min-content minmax(
       50px,
       auto
