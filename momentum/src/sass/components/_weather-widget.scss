@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  align-self: start;
   justify-content: flex-start;
-  padding: 10px;
   grid-area: weather;
   justify-self: end;
 }
