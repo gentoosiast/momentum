@@ -5,6 +5,14 @@
 - Reload icon by kavithaharish <https://www.iconfinder.com/icons/8111401/refresh_reload_reset_sync_arrow_icon>
 - Gear icon by Kalash <https://www.iconfinder.com/icons/4552618/cogwheel_gear_setting_icon>
 
+- Previous Track icon by Barudak Lier <https://www.iconfinder.com/icons/7549124/user_interface_rewind_backward_left_arrow_ui_icon>
+- Next Track icon by Barudak Lier <https://www.iconfinder.com/icons/7549123/user_interface_rewind_forward_right_arrow_next_ui_icon>
+- Pause icon by Barudak Lier <https://www.iconfinder.com/icons/7549084/user_interface_pause_circle_round_button_ui_icon>
+- Play icon by Barudak Lier <https://www.iconfinder.com/icons/7549052/user_interface_play_cirle_start_ui_icon>
+- Volume Mute icon by RemixIcon <https://www.iconfinder.com/icons/8680195/volume_mute_fill_icon>
+- Volume Low icon by RemixIcon <https://www.iconfinder.com/icons/8680327/volume_down_fill_icon>
+- Volume High icon by RemixIcon <https://www.iconfinder.com/icons/8680218/volume_up_fill_icon>
+
 ## Music
 
 Chasing Daylight by Scott Buckley | <https://soundcloud.com/scottbuckley>
