@@ -15,4 +15,12 @@ export default {
   getCountryCode(locale = 'en-US') {
     return locale.slice(0, 2);
   },
+
+  secondsToHumanReadableDuration(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remaining = Math.floor(seconds - minutes * 60);
+    return `${minutes.toString().padStart(2, '0')}:${remaining
+      .toString()
+      .padStart(2, '0')}`;
+  },
 };

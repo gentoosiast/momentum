@@ -44,3 +44,73 @@
     transform: rotate(30deg);
   }
 }
+
+.play-button {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/play.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.pause-button {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/pause.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.prev-button {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/prev-track.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.next-button {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/next-track.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.volume-high-button {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/volume-high.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.volume-low-button {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/volume-low.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.volume-mute-button {
+  width: 24px;
+  height: 24px;
+  border: unset;
+  background-color: transparent;
+  background-image: url('../assets/volume-mute.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

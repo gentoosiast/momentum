@@ -29,6 +29,30 @@
         <button class="chevron chevron-left"></button>
         <button class="chevron chevron-right"></button>
       </div>
+      <div class="audio-widget">
+        <ul class="audio-widget__playlist playlist"></ul>
+        <div class="audio-widget__player player">
+          <div class="player__seekbar seekbar">
+            <div class="seekbar__progress"></div>
+            <span class="seekbar__trackname">Some track name</span>
+          </div>
+          <div class="player__ui">
+            <button class="player__prev prev-button"></button>
+            <button class="player__play-pause play-button"></button>
+            <button class="player__next next-button"></button>
+            <time class="player__time"></time
+            ><span class="player__time-separator">/</span>
+            <time class="player__duration"></time>
+            <button class="player__volume-button volume-high-button"></button>
+            <input
+              class="player__volume-bar"
+              type="range"
+              step="0.05"
+              max="1.0"
+            />
+          </div>
+        </div>
+      </div>
       <div class="weather-widget">
         <input class="weather-widget__input" type="text" size="12" />
         <p class="weather-widget__icon-temp">

@@ -4,6 +4,7 @@ import i18n from './js/i18n';
 import imagesGitHub from './js/images-github';
 import utils from './js/utils';
 import quotes from './js/quotes';
+import audioWidget from './js/audio';
 import weather from './js/weather';
 
 let settings;
@@ -138,6 +139,7 @@ function init() {
   utils.setBg(body, imagesGitHub.getBackgroundURL());
   weatherInput.value = settings.city;
   updateWeather();
+  audioWidget.initPlayer();
 }
 
 globalThis.addEventListener('load', () => {
