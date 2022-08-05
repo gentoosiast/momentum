@@ -1,0 +1,62 @@
+[
+  {
+    "artist": "Scott Buckley",
+    "title": "Chasing Daylight",
+    "src": "./assets/media/scott-buckley-chasing-daylight.mp3",
+    "duration": "04:33"
+  },
+  {
+    "artist": "Purrple Cat",
+    "title": "Dark Moon",
+    "src": "./assets/media/purrple-cat-dark-moon.mp3",
+    "duration": "02:55"
+  },
+  {
+    "artist": "Hayden Folker",
+    "title": "Surrounded",
+    "src": "./assets/media/hayden-folker-surrounded.mp3",
+    "duration": "04:36"
+  },
+  {
+    "artist": "EuGenius Music",
+    "title": "By The Sea",
+    "src": "./assets/media/eu-genius-by-the-sea.mp3",
+    "duration": "05:43"
+  },
+  {
+    "artist": "Arthur Vyncke",
+    "title": "Uncertainty",
+    "src": "./assets/media/arthur-vyncke-uncertainty.mp3",
+    "duration": "02:38"
+  },
+  {
+    "artist": "FSM Team feat. < e s c p >",
+    "title": "Nightwalker",
+    "src": "./assets/media/nightwalker.mp3",
+    "duration": "05:11"
+  },
+  {
+    "artist": "Enlia",
+    "title": "Exit Strategy",
+    "src": "./assets/media/enlia-exit-strategy.mp3",
+    "duration": "02:58"
+  },
+  {
+    "artist": "Nettson",
+    "title": "Last Promise",
+    "src": "./assets/media/nettson-last-promise.mp3",
+    "duration": "02:35"
+  },
+  {
+    "artist": "Keys of Moon",
+    "title": "After the Rain",
+    "src": "./assets/media/keys-of-moon-after-the-rain.mp3",
+    "duration": "03:41"
+  },
+  {
+    "artist": "Savfk",
+    "title": "What Happens When We Die",
+    "src": "./assets/media/savfk-what-happens-when-we-die.mp3",
+    "duration": "03:49"
+  }
+]
