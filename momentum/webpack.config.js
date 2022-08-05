@@ -33,6 +33,7 @@ module.exports = {
       patterns: [
         { from: './src/assets/favicon.ico', to: '[name][ext]' },
         { from: './src/assets/quotes-*.json', to: './assets/[name][ext]' },
+        { from: './src/assets/media/*.mp3', to: './assets/media/[name][ext]' },
       ],
     }),
     new ESLintPlugin(),
@@ -90,7 +91,10 @@ module.exports = {
       },
       {
         test: /\.(mp3|ogg)$/,
-        type: 'asset',
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/media/[name].[ext]',
+        },
       },
       {
         test: /\.(eot|otf|ttf|woff2?)$/,
