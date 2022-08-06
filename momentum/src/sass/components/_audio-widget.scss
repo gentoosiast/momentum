@@ -16,6 +16,8 @@
   list-style-type: none;
   overflow-y: auto;
   scroll-behavior: smooth;
+  scrollbar-color: #d523f0 $light-color;
+  scrollbar-width: thin;
 
   &::-webkit-scrollbar {
     width: 5px;
