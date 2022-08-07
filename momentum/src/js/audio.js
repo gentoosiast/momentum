@@ -172,7 +172,7 @@ export default {
     audio.addEventListener('volumechange', updateVolumeIcon);
 
     volumeButton.addEventListener('click', toggleMute);
-    volumeBar.addEventListener('change', () => {
+    volumeBar.addEventListener('input', () => {
       audio.volume = volumeBar.value;
     });
   },
