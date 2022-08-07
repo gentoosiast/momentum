@@ -3,23 +3,23 @@ import utils from './utils';
 
 export default {
   url: 'https://raw.githubusercontent.com/gentoosiast/momentum-backgrounds/main',
-  randomIdx: utils.getRandomNum(1, 20),
+  idx: utils.getRandomNum(1, 20),
 
   getBackgroundURL() {
     const date = new Date();
     const timeOfDay = datetime.getTimeOfDay(date);
-    return `${this.url}/${timeOfDay}/${this.randomIdx
+    return `${this.url}/${timeOfDay}/${this.idx
       .toString()
       .padStart(2, '0')}.webp`;
   },
 
   getBackgroundPrev() {
-    this.randomIdx = this.randomIdx === 1 ? 20 : this.randomIdx - 1;
+    this.idx = this.idx === 1 ? 20 : this.idx - 1;
     return this.getBackgroundURL();
   },
 
   getBackgroundNext() {
-    this.randomIdx = this.randomIdx === 20 ? 1 : this.randomIdx + 1;
+    this.idx = this.idx === 20 ? 1 : this.idx + 1;
     return this.getBackgroundURL();
   },
 };
