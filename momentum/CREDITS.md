@@ -12,6 +12,7 @@
 - Volume Mute icon by RemixIcon <https://www.iconfinder.com/icons/8680195/volume_mute_fill_icon>
 - Volume Low icon by RemixIcon <https://www.iconfinder.com/icons/8680327/volume_down_fill_icon>
 - Volume High icon by RemixIcon <https://www.iconfinder.com/icons/8680218/volume_up_fill_icon>
+- Trashbin icon by Goran Babic <https://www.iconfinder.com/icons/2290850/clean_delete_garbage_recycle_bin_trash_icon>
 
 ## Music
 
