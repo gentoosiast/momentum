@@ -77,5 +77,171 @@
         <button class="quote-widget__reload"></button>
       </div>
     </main>
+    <div class="settings">
+      <button class="settings__close" type="button" aria-label="close settings">
+        &times;
+      </button>
+      <div class="settings__section settings__section_locale">
+        <p class="settings__heading settings__heading_locale"></p>
+        <fieldset class="settings__fieldset settings__fieldset_locale">
+          <input
+            type="radio"
+            data-id="locale"
+            id="settings__locale_en-US"
+            class="settings__radio"
+            name="settings__locale"
+            value="en-US"
+          />
+          <label class="settings__radio_label" for="settings__locale_en-US"
+            >English</label
+          >
+          <input
+            type="radio"
+            data-id="locale"
+            id="settings__locale_ru-RU"
+            class="settings__radio"
+            name="settings__locale"
+            value="ru-RU"
+          />
+          <label class="settings__radio_label" for="settings__locale_ru-RU"
+            >Русский</label
+          >
+        </fieldset>
+      </div>
+      <div class="settings__section settings__section_image-provider">
+        <p class="settings__heading settings__heading_image-provider"></p>
+        <fieldset class="settings__fieldset settings__fieldset_image-provider">
+          <input
+            type="radio"
+            data-id="imageProvider"
+            id="settings__image-provider_github"
+            class="settings__radio"
+            name="settings__image-provider"
+            value="github"
+          />
+          <label
+            class="settings__radio_label"
+            for="settings__image-provider_github"
+            >GitHub</label
+          >
+          <input
+            type="radio"
+            data-id="imageProvider"
+            id="settings__image-provider_unsplash"
+            class="settings__radio"
+            name="settings__image-provider"
+            value="unsplash"
+          />
+          <label
+            class="settings__radio_label"
+            for="settings__image-provider_unsplash"
+            >Unsplash</label
+          >
+          <input
+            type="radio"
+            data-id="imageProvider"
+            id="settings__image-provider_flickr"
+            class="settings__radio"
+            name="settings__image-provider"
+            value="flickr"
+          />
+          <label
+            class="settings__radio_label"
+            for="settings__image-provider_flickr"
+            >Flickr</label
+          >
+        </fieldset>
+        <input type="text" name="image-tags" class="settings__image-tags" />
+      </div>
+      <div class="settings__section settings__section_widgets">
+        <p class="settings__heading settings__heading_widgets"></p>
+        <fieldset class="settings__fieldset settings__fieldset_widgets">
+          <input
+            type="checkbox"
+            data-widget="clock"
+            class="settings__widget-checkbox settings__widget-checkbox_clock"
+            id="settings__widget_clock"
+          />
+          <label
+            class="settings__widget-label settings__widget-label_clock"
+            for="settings__widget_clock"
+          ></label>
+          <input
+            type="checkbox"
+            data-widget="calendar"
+            class="settings__widget-checkbox settings__widget-checkbox_calendar"
+            id="settings__widget_calendar"
+          />
+          <label
+            class="settings__widget-label settings__widget-label_calendar"
+            for="settings__widget_calendar"
+          ></label>
+          <input
+            type="checkbox"
+            data-widget="greeting"
+            class="settings__widget-checkbox settings__widget-checkbox_greeting"
+            id="settings__widget_greeting"
+          />
+          <label
+            class="settings__widget-label settings__widget-label_greeting"
+            for="settings__widget_greeting"
+          ></label>
+          <input
+            type="checkbox"
+            data-widget="quote"
+            class="settings__widget-checkbox settings__widget-checkbox_quote"
+            id="settings__widget_quote"
+          />
+          <label
+            class="settings__widget-label settings__widget-label_quote"
+            for="settings__widget_quote"
+          ></label>
+          <input
+            type="checkbox"
+            data-widget="weather"
+            class="settings__widget-checkbox settings__widget-checkbox_weather"
+            id="settings__widget_weather"
+          />
+          <label
+            class="settings__widget-label settings__widget-label_weather"
+            for="settings__widget_weather"
+          ></label>
+          <input
+            type="checkbox"
+            data-widget="audio"
+            class="settings__widget-checkbox settings__widget-checkbox_audio"
+            id="settings__widget_audio"
+          />
+          <label
+            class="settings__widget-label settings__widget-label_audio"
+            for="settings__widget_audio"
+          ></label>
+          <input
+            type="checkbox"
+            data-widget="tasklist"
+            class="settings__widget-checkbox setting__widget-checkbox_tasklist"
+            id="settings__widget_tasklist"
+          />
+          <label
+            class="settings__widget-label settings__widget-label_tasklist"
+            for="settings__widget_tasklist"
+          ></label>
+        </fieldset>
+      </div>
+      <div class="settings__section settings__section_copyright">
+        <a href="https://github.com/gentoosiast/">
+          <p class="settings__copyright copyright">
+            <img
+              class="copyright__icon"
+              src="<%= require('./assets/github.svg') %>"
+              alt="GitHub icon"
+              width="41"
+              height="40"
+            />
+            <small>© 2022 Sergey Koksharov</small>
+          </p>
+        </a>
+      </div>
+    </div>
   </body>
 </html>

@@ -31,4 +31,22 @@ export default {
     /* eslint-enable */
   },
 
+  hideWidget(widget) {
+    function removeWidthHeight() {
+      const el = widget;
+      el.style.width = 0;
+      el.style.height = 0;
+      widget.removeEventListener('transitionend', removeWidthHeight);
+    }
+
+    widget.classList.add('hidden');
+    widget.addEventListener('transitionend', removeWidthHeight);
+  },
+
+  showWidget(widget) {
+    const el = widget;
+    el.style.width = null;
+    el.style.height = null;
+    widget.classList.remove('hidden');
+  },
 };

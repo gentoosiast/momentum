@@ -1,0 +1,140 @@
+@use 'sass:color';
+
+// used to hide widgets
+.hidden {
+  opacity: 0;
+}
+
+.settings {
+  position: absolute;
+  bottom: 55px;
+  left: -210px;
+  display: flex;
+  width: min-content;
+  max-width: 200px;
+  flex-direction: column;
+  padding: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+    $gradient-bg-start,
+    $gradient-bg-stop
+  );
+  border-radius: 5px;
+  font-family: system-ui;
+  gap: 5px;
+  transition: left 0.6s ease-in-out;
+
+  &_visible {
+    left: 10px;
+  }
+}
+
+.settings__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: unset;
+  background-color: transparent;
+  color: $light-color;
+  cursor: pointer;
+  font-size: 20px;
+  transition: filter 0.3s ease-in-out;
+
+  &:hover {
+    @extend %icon-outline;
+  }
+}
+
+.settings__heading {
+  margin: 0;
+  margin-bottom: 5px;
+  color: $light-color;
+  font-family: $main-font;
+  font-weight: bold;
+  user-select: none;
+}
+
+.settings__radio {
+  width: 0;
+  height: 0;
+
+  &:checked + label {
+    background-color: $deep-color;
+    color: $light-color;
+  }
+}
+
+.settings__radio_label {
+  padding: 3px;
+  background-color: color.change($light-color, $alpha: 0.4);
+  border-radius: 3px;
+  color: $light-color;
+  cursor: pointer;
+  font-size: 12px;
+  user-select: none;
+}
+
+.settings__image-tags {
+  padding: 5px;
+  border: unset;
+  margin: 3px;
+  background-color: color.change($light-color, $alpha: 0.4);
+  border-radius: 3px;
+  color: $deep-color;
+  font-size: 12px;
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+.settings__fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  border: unset;
+  gap: 5px 3px;
+}
+
+.settings__widget-checkbox {
+  width: 0;
+  height: 0;
+
+  &:checked + label {
+    background-color: $deep-color;
+  }
+}
+
+.settings__widget-label {
+  display: inline-block;
+  padding: 3px;
+  background-color: color.change($light-color, $alpha: 0.4);
+  border-radius: 3px;
+  color: $light-color;
+  cursor: pointer;
+  font-size: 12px;
+  user-select: none;
+}
+
+.settings__section_copyright {
+  align-self: center;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.settings__copyright {
+  display: flex;
+  height: 16px;
+  align-items: center;
+  margin: 5px 0;
+  color: $light-color;
+  font-size: 15px;
+}
+
+.copyright__icon {
+  width: auto;
+  max-height: 100%;
+  margin-right: 5px;
+}
