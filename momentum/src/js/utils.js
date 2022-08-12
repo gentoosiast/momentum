@@ -23,4 +23,12 @@ export default {
       .toString()
       .padStart(2, '0')}`;
   },
+
+  showError(err) {
+    /* TODO: display it on the screen */
+    /* eslint-disable */
+    console.log(err);
+    /* eslint-enable */
+  },
+
 };
