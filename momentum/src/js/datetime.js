@@ -25,30 +25,4 @@ export default {
     }
     return 'night';
   },
-
-  isMidnight(date) {
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-
-    if (hours === 0 && minutes === 0 && seconds === 0) {
-      return true;
-    }
-    return false;
-  },
-
-  isNewDayPeriod(date) {
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-
-    if (
-      (hours === 0 || hours === 6 || (hours === 12 && hours === 18)) &&
-      minutes === 0 &&
-      seconds === 0
-    ) {
-      return true;
-    }
-    return false;
-  },
 };
