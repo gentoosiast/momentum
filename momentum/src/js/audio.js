@@ -113,7 +113,7 @@ function toggleMute() {
 }
 
 export default {
-  initPlayer() {
+  init() {
     playlist.forEach((item, i) => {
       const li = document.createElement('li');
       li.classList.add('playlist__item');
