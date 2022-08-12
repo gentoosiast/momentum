@@ -1,0 +1,15 @@
+.calendar-widget {
+  @extend %opacity-transition;
+  @extend %text-outline;
+
+  overflow: hidden;
+  margin: 0 auto 10px;
+  color: $light-color;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 48px;
+  grid-area: calendar;
+}
+
+.calendar-widget__calendar {
+  margin: 0 auto;
+}
