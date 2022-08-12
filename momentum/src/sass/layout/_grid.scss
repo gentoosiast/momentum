@@ -4,12 +4,13 @@
   padding: 10px;
   grid-template-areas:
     'audio . weather'
-    'date date date'
+    'clock clock clock'
+    'calendar calendar calendar'
     'greeting greeting greeting'
-    'quote quote quote';
+    '. quote tasklist';
   grid-template-columns: minmax(100px, 320px) 1fr minmax(100px, 320px);
-  grid-template-rows: minmax(100px, 300px) min-content min-content minmax(
-      50px,
+  grid-template-rows: minmax(100px, 300px) min-content min-content min-content minmax(
+      250px,
       auto
     );
 }

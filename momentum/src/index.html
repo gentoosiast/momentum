@@ -24,26 +24,54 @@
   </head>
   <body>
     <main class="main grid-container">
-      <button class="settings-button"></button>
+      <button
+        class="settings-button"
+        type="button"
+        aria-label="open settings"
+      ></button>
       <div class="chevron-icons">
-        <button class="chevron chevron-left"></button>
-        <button class="chevron chevron-right"></button>
+        <button
+          class="chevron chevron-left"
+          type="button"
+          aria-label="previous background"
+        ></button>
+        <button
+          class="chevron chevron-right"
+          type="button"
+          aria-label="next background"
+        ></button>
       </div>
       <div class="audio-widget">
         <ul class="audio-widget__playlist playlist"></ul>
         <div class="audio-widget__player player">
           <div class="player__seekbar seekbar">
             <div class="seekbar__progress"></div>
-            <span class="seekbar__trackname">Some track name</span>
+            <span class="seekbar__trackname"></span>
           </div>
           <div class="player__ui">
-            <button class="player__prev prev-button"></button>
-            <button class="player__play-pause play-button"></button>
-            <button class="player__next next-button"></button>
-            <time class="player__time"></time
-            ><span class="player__time-separator">/</span>
-            <time class="player__duration"></time>
-            <button class="player__volume-button volume-high-button"></button>
+            <button
+              class="player__prev prev-button"
+              type="button"
+              aria-label="previous track"
+            ></button>
+            <button
+              class="player__play-pause play-button"
+              type="button"
+              aria-label="play/pause"
+            ></button>
+            <button
+              class="player__next next-button"
+              type="button"
+              aria-label="next track"
+            ></button>
+            <span class="player__time"></span>
+            <span class="player__time-separator">/</span>
+            <span class="player__duration"></span>
+            <button
+              class="player__volume-button volume-high-button"
+              type="button"
+              aria-label="mute/unmute"
+            ></button>
             <input
               class="player__volume-bar"
               type="range"
@@ -53,8 +81,9 @@
           </div>
         </div>
       </div>
-      <div class="weather-widget">
+      <div class="weather-widget" id="weather">
         <input class="weather-widget__input" type="text" size="12" />
+        <p class="weather-widget__error"></p>
         <p class="weather-widget__icon-temp">
           <i class="weather-widget__icon"></i
           ><span class="weather-widget__temp"></span>
@@ -63,9 +92,11 @@
         <p class="weather-widget__wind"></p>
         <p class="weather-widget__humidity"></p>
       </div>
-      <div class="date-widget">
-        <time class="date-widget__clock"></time>
-        <p class="date-widget__calendar"></p>
+      <div class="clock-widget">
+        <span class="clock-widget__clock"></span>
+      </div>
+      <div class="calendar-widget">
+        <p class="calendar-widget__calendar"></p>
       </div>
       <div class="greeting-widget">
         <span class="greeting-widget__text"></span
@@ -74,7 +105,22 @@
       <div class="quote-widget">
         <p class="quote-widget__text"></p>
         <p class="quote-widget__author"></p>
-        <button class="quote-widget__reload"></button>
+        <button
+          class="quote-widget__reload reload-button"
+          type="button"
+          aria-label="next quote"
+        ></button>
+      </div>
+      <div class="tasklist-widget">
+        <ul class="tasklist-widget__tasks"></ul>
+        <div class="tasklist-widget__input-button">
+          <input type="text" class="taskslist-widget__input" />
+          <button
+            class="tasklist-widget__clear trash-button"
+            type="button"
+            aria-label="clear completed tasks"
+          ></button>
+        </div>
       </div>
     </main>
     <div class="settings">
