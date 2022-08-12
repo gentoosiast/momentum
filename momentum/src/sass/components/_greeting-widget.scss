@@ -1,9 +1,15 @@
+@use 'sass:color';
+
 .greeting-widget {
+  @extend %opacity-transition;
+
   display: flex;
+  overflow: hidden;
   align-items: center;
   align-self: start;
   grid-area: greeting;
   justify-self: center;
+  opacity: 1;
 }
 
 .greeting-widget__text {
@@ -27,7 +33,7 @@
   font-size: 56px;
 
   &:focus {
-    border: 1px dashed rgb(255 255 255 / 50%);
+    border: 1px dashed color.change($light-color, $alpha: 0.5);
     outline: unset;
   }
 }
