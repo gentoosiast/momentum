@@ -1,0 +1,62 @@
+{
+  "en-US": {
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening",
+      "night": "Good night"
+    },
+    "namePlaceholder": "Enter name",
+    "weather": {
+      "humidity": "Humidity",
+      "windSpeed": "Wind Speed",
+      "windSpeedUnits": "m/s",
+      "cityNotFound": "🛑 ERROR: City not found"
+    },
+    "tasklistPlaceholder": "enter task",
+    "tasklistButtonTitle": "clear completed tasks",
+    "settings": {
+      "localeLabel": "Language",
+      "imageProviderLabel": "Image Provider",
+      "widgetsLabel": "Widgets",
+      "imageTagsPlaceholder": "tags (space separated)",
+      "clockLabel": "Clock",
+      "calendarLabel": "Calendar",
+      "greetingLabel": "Greeting",
+      "qotdLabel": "Quote of the Day",
+      "weatherLabel": "Weather",
+      "audioLabel": "Audio Player",
+      "tasklistLabel": "Tasklist"
+    }
+  },
+  "ru-RU": {
+    "greeting": {
+      "morning": "Доброе утро",
+      "afternoon": "Добрый день",
+      "evening": "Добрый вечер",
+      "night": "Доброй ночи"
+    },
+    "namePlaceholder": "Введите имя",
+    "weather": {
+      "humidity": "Влажность воздуха",
+      "windSpeed": "Скорость ветра",
+      "windSpeedUnits": "м/с",
+      "cityNotFound": "🛑 ОШИБКА: город не найден"
+    },
+    "tasklistPlaceholder": "введите задачу",
+    "tasklistButtonTitle": "удалить завершенные задачи",
+    "settings": {
+      "localeLabel": "Язык",
+      "imageProviderLabel": "Источник изображений",
+      "widgetsLabel": "Виджеты",
+      "imageTagsPlaceholder": "теги (через пробел)",
+      "clockLabel": "Часы",
+      "calendarLabel": "Календарь",
+      "greetingLabel": "Приветствие",
+      "qotdLabel": "Цитата дня",
+      "weatherLabel": "Погода",
+      "audioLabel": "Аудиоплейер",
+      "tasklistLabel": "Список задач"
+    }
+  }
+}
