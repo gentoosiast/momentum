@@ -1,0 +1,88 @@
+@use 'sass:color';
+
+.tasklist-widget {
+  @extend %opacity-transition;
+
+  overflow: hidden;
+  align-self: end;
+  padding: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+    $gradient-bg-start,
+    $gradient-bg-stop
+  );
+  border-radius: 5px;
+  grid-area: tasklist;
+  justify-self: end;
+  opacity: 1;
+}
+
+.tasklist-widget__tasks {
+  overflow: auto;
+  max-height: 150px;
+  padding-left: 0;
+  margin: 5px 0;
+  line-height: normal;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  scrollbar-color: $deep-color $light-color;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $light-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $deep-color;
+    border-radius: 3px;
+  }
+}
+
+.tasklist-widget__task {
+  display: flex;
+  align-items: center;
+}
+
+.task__checkbox {
+  margin-right: 5px;
+  accent-color: $deep-color;
+
+  &:checked + .task__name {
+    opacity: 0.7;
+    text-decoration: line-through;
+  }
+}
+
+.task__name {
+  outline: unset;
+}
+
+.tasklist-widget__input-button {
+  display: flex;
+  align-items: center;
+}
+
+.taskslist-widget__input {
+  padding: 3px;
+  border: unset;
+  margin-right: 3px;
+  background-color: color.change($light-color, $alpha: 0.4);
+  border-radius: 3px;
+  color: $deep-color;
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+.tasklist-widget__clear {
+  width: 16px;
+  height: 16px;
+  border: unset;
+  background-color: transparent;
+  cursor: pointer;
+}
