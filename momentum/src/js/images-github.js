@@ -2,24 +2,24 @@ import datetime from './datetime';
 import utils from './utils';
 
 export default {
-  url: 'https://raw.githubusercontent.com/gentoosiast/momentum-backgrounds/main',
   idx: utils.getRandomNum(1, 20),
 
-  getBackgroundURL() {
+  getImage() {
     const date = new Date();
     const timeOfDay = datetime.getTimeOfDay(date);
-    return `${this.url}/${timeOfDay}/${this.idx
-      .toString()
-      .padStart(2, '0')}.webp`;
+    const imgNum = this.idx.toString().padStart(2, '0');
+    const url = `https://raw.githubusercontent.com/gentoosiast/momentum-backgrounds/main/${timeOfDay}/${imgNum}.webp`;
+
+    return Promise.resolve(url);
   },
 
-  getBackgroundPrev() {
+  prev() {
     this.idx = this.idx === 1 ? 20 : this.idx - 1;
-    return this.getBackgroundURL();
+    return this.getImage();
   },
 
-  getBackgroundNext() {
+  next() {
     this.idx = this.idx === 20 ? 1 : this.idx + 1;
-    return this.getBackgroundURL();
+    return this.getImage();
   },
 };
