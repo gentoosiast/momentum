@@ -7,3 +7,11 @@
     rgb(119, 119, 119) 0.283662px -0.958924px 0,
     rgb(119, 119, 119) 0.96017px -0.279416px 0;
 }
+
+%icon-outline {
+  filter: drop-shadow(0 0 3px #680bbe);
+}
+
+%opacity-transition {
+  transition: opacity 0.5s ease-in-out;
+}
