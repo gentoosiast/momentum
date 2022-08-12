@@ -141,6 +141,7 @@ export default {
     seekBarTrackName.textContent = playlist[playIdx].title;
     playingTime.textContent = '00:00';
     playDuration.textContent = playlist[playIdx].duration;
+    audio.volume = 0.75;
     volumeBar.value = audio.volume;
     updateVolumeIcon();
 
