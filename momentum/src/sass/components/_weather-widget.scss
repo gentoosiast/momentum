@@ -1,13 +1,26 @@
 .weather-widget {
-  @extend %text-outline;
+  @extend %opacity-transition;
 
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: flex-start;
   align-self: start;
   justify-content: flex-start;
+  padding: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+    $gradient-bg-start,
+    $gradient-bg-stop
+  );
+  border-radius: 5px;
   grid-area: weather;
   justify-self: end;
+  opacity: 1;
+
+  &_hidden {
+    opacity: 0;
+  }
 }
 
 .weather-widget__input {
@@ -22,14 +35,30 @@
   }
 }
 
+.weather-widget__error {
+  margin: 0;
+  background-color: $error-color;
+
+  &:not(:empty) {
+    padding: 5px;
+    margin: 10px 0 0;
+    border-radius: 3px;
+  }
+
+  &:not(:empty) ~ p {
+    display: none;
+  }
+}
+
 .weather-widget__icon-temp {
   display: flex;
   align-items: center;
+  padding-left: 10px;
   margin: 10px 0;
 }
 
 .weather-widget__icon {
-  padding-right: 10px;
+  padding-right: 5px;
   font-size: 48px;
 }
 
@@ -38,13 +67,16 @@
 }
 
 .weather-widget__desc {
-  margin: 0 0 10px;
+  padding-left: 10px;
+  margin: 0 0 5px;
 }
 
 .weather-widget__wind {
-  margin: 0 0 10px;
+  padding-left: 10px;
+  margin: 0 0 5px;
 }
 
 .weather-widget__humidity {
+  padding-left: 10px;
   margin: 0;
 }
