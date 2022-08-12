@@ -1,15 +1,20 @@
 @use 'sass:color';
 
 .quote-widget {
+  @extend %opacity-transition;
+
   display: flex;
+  overflow: hidden;
   max-width: 800px;
   flex-direction: column;
   align-items: center;
   align-self: end;
   justify-content: center;
-  padding-bottom: 5px;
+  padding: 0 10px;
   margin: 0 auto;
   grid-area: quote;
+  justify-self: center;
+  opacity: 1;
 }
 
 .quote-widget__text {
@@ -26,20 +31,6 @@
   @extend %text-outline;
 
   margin: 0 auto 10px;
-  color: color.mix(#000, $light-color, 10%);
+  color: color.mix($deep-color, $light-color, 20%);
   text-align: center;
-}
-
-.quote-widget__reload {
-  width: 48px;
-  height: 48px;
-  border: unset;
-  background-color: transparent;
-  background-image: url('../assets/reload.svg');
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 }
