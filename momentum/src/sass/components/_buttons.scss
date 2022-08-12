@@ -1,4 +1,6 @@
 .chevron {
+  @extend %icon-outline;
+
   position: absolute;
   top: 50%;
   width: 48px;
@@ -28,6 +30,8 @@
 }
 
 .settings-button {
+  @extend %icon-outline;
+
   position: absolute;
   bottom: 15px;
   left: 10px;
