@@ -29,7 +29,7 @@ function updateWeatherWidget(result) {
     }: ${windSpeed} ${i18n[state.get('locale')].weather.windSpeedUnits}`;
     weatherHumidity.textContent = `${
       i18n[state.get('locale')].weather.humidity
-    } ${humidity}%`;
+    }: ${humidity}%`;
   }
 }
 
