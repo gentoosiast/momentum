@@ -35,7 +35,6 @@ function playAudio() {
   playPauseBtn.classList.remove('play-button');
   playPauseBtn.classList.add('pause-button');
   playDuration.textContent = playlist[playIdx].duration;
-  audio.src = playlist[playIdx].src;
   audio.play();
 }
 
@@ -62,6 +61,7 @@ function playNext() {
   playlistButton.classList.add('play-button');
   playlistItems[playIdx].classList.remove('playlist__item_active');
   playIdx = playIdx === playlist.length - 1 ? 0 : playIdx + 1;
+  audio.src = playlist[playIdx].src;
   updatePlaylistScroll();
   playAudio();
 }
@@ -74,6 +74,7 @@ function playPrev() {
   playlistButton.classList.add('play-button');
   playlistItems[playIdx].classList.remove('playlist__item_active');
   playIdx = playIdx === 0 ? playlist.length - 1 : playIdx - 1;
+  audio.src = playlist[playIdx].src;
   updatePlaylistScroll();
   playAudio();
 }
@@ -91,6 +92,7 @@ function handlePlaylistClick(target) {
     playlistButton.classList.add('play-button');
     playlistItems[playIdx].classList.remove('playlist__item_active');
     playIdx = clickedTrackIdx;
+    audio.src = playlist[playIdx].src;
     playAudio();
   }
 }
