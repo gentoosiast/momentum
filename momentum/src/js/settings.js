@@ -150,8 +150,21 @@ closeButton.addEventListener('click', () => {
   settingsPopup.classList.remove('settings_visible');
 });
 
+function closeSettingsPopup(e) {
+  if (!settingsButton.contains(e.target)) {
+    settingsPopup.classList.remove('settings_visible');
+    document.removeEventListener('click', closeSettingsPopup);
+  }
+}
+
 settingsButton.addEventListener('click', () => {
-  settingsPopup.classList.toggle('settings_visible');
+  if (settingsPopup.classList.contains('settings_visible')) {
+    settingsPopup.classList.remove('settings_visible');
+    document.removeEventListener('click', closeSettingsPopup);
+  } else {
+    settingsPopup.classList.add('settings_visible');
+    document.addEventListener('click', closeSettingsPopup);
+  }
 });
 
 export default {
