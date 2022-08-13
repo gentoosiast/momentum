@@ -42,6 +42,7 @@ function pollEverySecond() {
 function init() {
   settings.init();
   const date = new Date();
+  sessionStorage.setItem('timeOfDay', datetime.getTimeOfDay(date));
   setInterval(pollEverySecond, 1000);
   setInterval(weather.update, 1000 * 60 * 30);
   updateClock(date);
