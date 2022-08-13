@@ -1,6 +1,5 @@
-@use 'sass:color';
-
 .clock-widget {
+  @extend %text-outline;
   @extend %opacity-transition;
 
   overflow: hidden;
@@ -10,6 +9,5 @@
   font-size: 100px;
   grid-area: clock;
   opacity: 0;
-  text-shadow: 2px 2px 0 color.mix($light-color, $deep-color, 40%);
   user-select: none;
 }

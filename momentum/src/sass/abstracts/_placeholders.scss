@@ -1,11 +1,7 @@
+@use 'sass:color';
+
 %text-outline {
-  text-shadow: rgb(119, 119, 119) 1px 0 0,
-    rgb(119, 119, 119) 0.540302px 0.841471px 0,
-    rgb(119, 119, 119) -0.416147px 0.909297px 0,
-    rgb(119, 119, 119) -0.989993px 0.14112px 0,
-    rgb(119, 119, 119) -0.653644px -0.756803px 0,
-    rgb(119, 119, 119) 0.283662px -0.958924px 0,
-    rgb(119, 119, 119) 0.96017px -0.279416px 0;
+  text-shadow: 2px 2px 0 color.mix($light-color, $deep-color, 40%);
 }
 
 %icon-outline {
