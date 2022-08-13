@@ -112,11 +112,8 @@ function changeImageProvider(provider) {
 }
 
 localeFieldset.addEventListener('change', (e) => {
-  /* eslint-disable */
   const radioBtn = e.target;
-  console.log('change', radioBtn.value);
   changeLocale(radioBtn.value);
-  /* eslint-enable */
 });
 
 imageProviderFieldset.addEventListener('change', (e) => {

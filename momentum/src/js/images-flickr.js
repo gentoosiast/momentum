@@ -12,10 +12,6 @@ async function fetchURLs(page = 1) {
   )}&tag_mode=all&sort=relevance&safe_search=1&content_type=1&media=photos&page=${page}&per_page=200&extras=url_h&format=json&nojsoncallback=1`;
   let urls = [];
 
-  /* eslint-disable */
-  console.log('flickr fetch', apiEndpoint);
-  /* eslint-enable */
-
   const res = await fetch(apiEndpoint);
 
   if (res.ok) {
@@ -28,12 +24,9 @@ async function fetchURLs(page = 1) {
     urls = data.photos.photo
       .filter((photo) => photo.url_h && photo.width_h > photo.height_h * 1.3)
       .map((photo) => photo.url_h);
-    /* eslint-disable */
-    console.log('flickr urls', urls);
     sessionStorage.setItem('flickrTags', JSON.stringify(tags));
     sessionStorage.setItem('flickrURLs', JSON.stringify(urls));
     sessionStorage.setItem('flickrPage', JSON.stringify(page));
-    /* eslint-enable */
   } else {
     throw new Error(`images-flickr: HTTP Response Code: ${res.status}`);
   }
@@ -55,22 +48,13 @@ export default {
         this.page = 1;
       }
       if (tagsNotChanged && lastPage === this.page) {
-        /* eslint-disable */
-        console.log('images-flickr: getting images from cache');
-        /* eslint-enable */
         this.urls = JSON.parse(sessionStorage.getItem('flickrURLs'));
       } else {
-        /* eslint-disable */
-        console.log('images-flickr: making fetch request');
-        /* eslint-enable */
         const urls = await fetchURLs(this.page);
         this.urls = urls;
       }
       this.page += 1;
     }
-    /* eslint-disable */
-    console.log('urls remaining', this.urls.length - 1);
-    /* eslint-enable */
     return this.urls.shift();
   },
 
