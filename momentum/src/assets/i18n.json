@@ -8,6 +8,7 @@
     },
     "namePlaceholder": "Enter name",
     "weather": {
+      "defaultCity": "Minsk",
       "humidity": "Humidity",
       "windSpeed": "Wind Speed",
       "windSpeedUnits": "m/s",
@@ -38,6 +39,7 @@
     },
     "namePlaceholder": "Введите имя",
     "weather": {
+      "defaultCity": "Минск",
       "humidity": "Влажность воздуха",
       "windSpeed": "Скорость ветра",
       "windSpeedUnits": "м/с",

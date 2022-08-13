@@ -74,6 +74,7 @@ async function getWeather(city = 'Minsk', lang = 'en') {
 function update() {
   const city = state.get('city');
   const lang = utils.getCountryCode(state.get('locale'));
+  weatherInput.value = city;
   try {
     getWeather(city, lang);
   } catch (e) {
