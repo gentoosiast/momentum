@@ -33,7 +33,10 @@ function pollEverySecond() {
   if (timeOfDay !== sessionStorage.getItem('timeOfDay')) {
     sessionStorage.setItem('timeOfDay', timeOfDay);
     greeting.setGreeting(date);
-    if (state.get('imageProvider') === 'github') {
+    if (
+      state.get('imageProvider') === 'github' ||
+      localStorage.getItem('imageTags') === null
+    ) {
       images.next();
     }
   }

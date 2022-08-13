@@ -1,11 +1,11 @@
 import i18n from '../assets/i18n.json';
+import datetime from './datetime';
 
 function get(key) {
   const defaultSettings = {
     userName: '',
     locale: 'ru-RU',
     imageProvider: 'github',
-    imageTags: [],
     weatherLastRequest: 0,
     tasks: [],
     widgets: {
@@ -24,6 +24,8 @@ function get(key) {
   if (!val) {
     if (key === 'city') {
       val = i18n[get('locale')].weather.defaultCity;
+    } else if (key === 'imageTags') {
+      val = [datetime.getTimeOfDay()];
     } else {
       val = defaultSettings[key];
     }

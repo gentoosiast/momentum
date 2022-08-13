@@ -44,16 +44,13 @@ export default {
   page: JSON.parse(sessionStorage.getItem('unsplashPage')) ?? 1,
   urls: [],
   async getImage() {
-    let tags = state.get('imageTags');
+    const tags = state.get('imageTags');
     const lastTags = JSON.parse(sessionStorage.getItem('unsplashTags')) ?? [];
     const tagsNotChanged =
       tags.length === lastTags.length &&
       lastTags.every((tag) => tags.includes(tag));
     if (this.urls.length === 0 || !tagsNotChanged) {
       const lastPage = JSON.parse(sessionStorage.getItem('unsplashPage')) ?? 1;
-      if (tags.length === 0) {
-        tags = [datetime.getTimeOfDay()];
-      }
       if (!tagsNotChanged) {
         this.page = 1;
       }
