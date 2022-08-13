@@ -33,20 +33,16 @@ export default {
 
   hideWidget(widget) {
     function removeWidthHeight() {
-      const el = widget;
-      el.style.width = 0;
-      el.style.height = 0;
+      widget.classList.add('dimensionless');
       widget.removeEventListener('transitionend', removeWidthHeight);
     }
 
-    widget.classList.add('hidden');
+    widget.classList.remove('visible');
     widget.addEventListener('transitionend', removeWidthHeight);
   },
 
   showWidget(widget) {
-    const el = widget;
-    el.style.width = null;
-    el.style.height = null;
-    widget.classList.remove('hidden');
+    widget.classList.remove('dimensionless');
+    widget.classList.add('visible');
   },
 };

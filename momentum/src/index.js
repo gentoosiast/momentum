@@ -56,6 +56,10 @@ function init() {
   tasklist.init();
 }
 
+globalThis.addEventListener('DOMContentLoaded', () => {
+  document.body.style.visibility = 'visible';
+});
+
 globalThis.addEventListener('load', () => {
   init();
 });

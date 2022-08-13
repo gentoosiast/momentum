@@ -30,15 +30,19 @@ const imageProviderFieldset = document.querySelector(
 );
 const tagsInput = document.querySelector('.settings__image-tags');
 
-function handleCheckbox(e) {
+function toggleWidget(e) {
   const checkbox = e.target;
-  const widgetName = `.${checkbox.getAttribute('data-widget')}-widget`;
-  const widget = document.querySelector(widgetName);
+  const widgetName = checkbox.getAttribute('data-widget');
+  const widget = document.querySelector(`.${widgetName}-widget`);
+  const widgets = state.get('widgets');
   if (checkbox.checked) {
+    widgets[widgetName] = true;
     utils.showWidget(widget);
   } else {
+    widgets[widgetName] = false;
     utils.hideWidget(widget);
   }
+  state.set('widgets', widgets);
 }
 
 function localize() {
@@ -156,13 +160,16 @@ settingsButton.addEventListener('click', () => {
 export default {
   init() {
     localize();
-    const enabledWidgets = state.get('widgets');
+    const widgets = state.get('widgets');
     for (let i = 0; i < widgetCheckboxes.length; i += 1) {
       const checkbox = widgetCheckboxes[i];
-      if (enabledWidgets.includes(checkbox.getAttribute('data-widget'))) {
+      const widgetName = checkbox.getAttribute('data-widget');
+      if (widgets[widgetName]) {
         checkbox.setAttribute('checked', '');
+        const widget = document.querySelector(`.${widgetName}-widget`);
+        utils.showWidget(widget);
       }
-      checkbox.addEventListener('click', handleCheckbox);
+      checkbox.addEventListener('click', toggleWidget);
     }
 
     localeRadioButtons.forEach((localeBtn) => {

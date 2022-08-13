@@ -9,7 +9,7 @@
   font-family: $clock-font;
   font-size: 100px;
   grid-area: clock;
+  opacity: 0;
   text-shadow: 2px 2px 0 color.mix($light-color, $deep-color, 40%);
-  transition: opacity 0.5s ease-in-out;
   user-select: none;
 }

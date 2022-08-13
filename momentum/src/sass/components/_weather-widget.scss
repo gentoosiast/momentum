@@ -16,11 +16,7 @@
   border-radius: 5px;
   grid-area: weather;
   justify-self: end;
-  opacity: 1;
-
-  &_hidden {
-    opacity: 0;
-  }
+  opacity: 0;
 }
 
 .weather-widget__input {

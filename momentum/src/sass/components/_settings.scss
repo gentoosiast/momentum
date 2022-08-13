@@ -1,8 +1,17 @@
 @use 'sass:color';
 
 // used to hide widgets
-.hidden {
-  opacity: 0;
+.dimensionless {
+  width: 0;
+  height: 0;
+  box-sizing: content-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.visible {
+  opacity: 1;
 }
 
 .settings {
@@ -54,24 +63,32 @@
   user-select: none;
 }
 
-.settings__radio {
+.settings__radio,
+.settings__widget-checkbox {
   width: 0;
   height: 0;
+  box-sizing: content-box;
+  border: unset;
+  appearance: none;
 
   &:checked + label {
     background-color: $deep-color;
-    color: $light-color;
   }
 }
 
 .settings__radio_label {
   padding: 3px;
+  margin-right: 3px;
   background-color: color.change($light-color, $alpha: 0.4);
   border-radius: 3px;
   color: $light-color;
   cursor: pointer;
   font-size: 12px;
   user-select: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .settings__image-tags {
@@ -93,27 +110,28 @@
   flex-wrap: wrap;
   padding: 5px;
   border: unset;
-  gap: 5px 3px;
-}
+  row-gap: 5px;
 
-.settings__widget-checkbox {
-  width: 0;
-  height: 0;
-
-  &:checked + label {
-    background-color: $deep-color;
+  &_image-provider,
+  &_locale {
+    flex-wrap: nowrap;
   }
 }
 
 .settings__widget-label {
   display: inline-block;
   padding: 3px;
+  margin-right: 3px;
   background-color: color.change($light-color, $alpha: 0.4);
   border-radius: 3px;
   color: $light-color;
   cursor: pointer;
   font-size: 12px;
   user-select: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .settings__section_copyright {
