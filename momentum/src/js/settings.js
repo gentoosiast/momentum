@@ -151,19 +151,20 @@ closeButton.addEventListener('click', () => {
 });
 
 function closeSettingsPopup(e) {
-  if (!settingsButton.contains(e.target)) {
+  if (!settingsPopup.contains(e.target)) {
     settingsPopup.classList.remove('settings_visible');
     document.removeEventListener('click', closeSettingsPopup);
   }
 }
 
-settingsButton.addEventListener('click', () => {
+settingsButton.addEventListener('click', (e) => {
   if (settingsPopup.classList.contains('settings_visible')) {
     settingsPopup.classList.remove('settings_visible');
     document.removeEventListener('click', closeSettingsPopup);
   } else {
     settingsPopup.classList.add('settings_visible');
     document.addEventListener('click', closeSettingsPopup);
+    e.stopPropagation();
   }
 });
 

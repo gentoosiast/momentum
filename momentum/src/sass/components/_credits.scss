@@ -1,0 +1,31 @@
+.credits {
+  display: flex;
+  max-width: 200px;
+  align-items: flex-end;
+  align-self: end;
+  justify-content: flex-start;
+  grid-area: credits;
+  justify-self: start;
+}
+
+.credits__settings-button {
+  @extend %icon-outline;
+
+  padding: 0;
+  border: unset;
+  margin-right: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0;
+
+  transition: transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: rotate(30deg);
+  }
+}
+
+.credits__logo {
+  block-size: auto;
+  max-inline-size: 100%;
+}

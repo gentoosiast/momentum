@@ -24,11 +24,6 @@
   </head>
   <body style="visibility: hidden">
     <main class="main grid-container">
-      <button
-        class="settings-button"
-        type="button"
-        aria-label="open settings"
-      ></button>
       <div class="chevron-icons">
         <button
           class="chevron chevron-left"
@@ -101,6 +96,29 @@
       <article class="greeting-widget dimensionless">
         <span class="greeting-widget__text"></span
         ><input class="greeting-widget__name" type="text" size="10" />
+      </article>
+      <article class="credits">
+        <button
+          class="credits__settings-button settings-button"
+          type="button"
+          aria-label="settings menu"
+        >
+          <img
+            src="<%= require('./assets/gear.svg') %>"
+            alt=""
+            width="32"
+            height="32"
+          />
+        </button>
+        <a href="https://rs.school/js-stage0/">
+          <img
+            class="credits__logo"
+            src="<%= require('./assets/rsschool-logo.svg') %>"
+            alt="RS School logo"
+            width="553"
+            height="206"
+          />
+        </a>
       </article>
       <article class="quote-widget dimensionless">
         <p class="quote-widget__text"></p>
