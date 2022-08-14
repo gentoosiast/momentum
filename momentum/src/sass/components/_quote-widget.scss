@@ -34,3 +34,20 @@
   color: color.mix($deep-color, $light-color, 20%);
   text-align: center;
 }
+
+.quote-widget__reload {
+  @extend %icon-outline;
+
+  // width: 48px;
+  // height: 48px;
+  padding: 0;
+  border: unset;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  transition: transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}

@@ -28,13 +28,27 @@
         <button
           class="chevron chevron-left"
           type="button"
-          aria-label="previous background"
-        ></button>
+          aria-label="previous background image"
+        >
+          <img
+            src="<%= require('./assets/chevron-left.svg') %>"
+            alt=""
+            width="48"
+            height="48"
+          />
+        </button>
         <button
           class="chevron chevron-right"
           type="button"
-          aria-label="next background"
-        ></button>
+          aria-label="next background image"
+        >
+          <img
+            src="<%= require('./assets/chevron-right.svg') %>"
+            alt=""
+            width="48"
+            height="48"
+          />
+        </button>
       </div>
       <article class="audio-widget dimensionless">
         <ul class="audio-widget__playlist playlist"></ul>
@@ -127,7 +141,14 @@
           class="quote-widget__reload reload-button"
           type="button"
           aria-label="next quote"
-        ></button>
+        >
+          <img
+            src="<%= require('./assets/reload.svg') %>"
+            alt=""
+            width="48"
+            height="48"
+          />
+        </button>
       </article>
       <article class="tasklist-widget dimensionless">
         <ul class="tasklist-widget__tasks"></ul>

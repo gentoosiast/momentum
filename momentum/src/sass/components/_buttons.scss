@@ -3,10 +3,11 @@
 
   position: absolute;
   top: 50%;
-  width: 48px;
-  height: 48px;
+  padding: 0;
   border: unset;
+  background-color: transparent;
   cursor: pointer;
+  font-size: 0;
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
 
@@ -16,33 +17,12 @@
 }
 
 .chevron-left {
-  left: 25px;
-  background-color: transparent;
-  background-image: url('../assets/chevron-left.svg');
-  background-repeat: no-repeat;
+  left: 10px;
+  // background-color: transparent;
 }
 
 .chevron-right {
-  right: 25px;
-  background-color: transparent;
-  background-image: url('../assets/chevron-right.svg');
-  background-repeat: no-repeat;
-}
-
-.reload-button {
-  @extend %icon-outline;
-
-  width: 48px;
-  height: 48px;
-  border: unset;
-  background-color: transparent;
-  background-image: url('../assets/reload.svg');
-  cursor: pointer;
-  transition: transform 0.5s ease-in-out;
-
-  &:hover {
-    transform: rotate(180deg);
-  }
+  right: 10px;
 }
 
 .play-button {
