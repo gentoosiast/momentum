@@ -167,7 +167,10 @@
         &times;
       </button>
       <div class="settings__section settings__section_locale">
-        <p class="settings__heading settings__heading_locale"></p>
+        <p
+          class="settings__heading settings__heading_locale"
+          data-i18n="localeLabel"
+        ></p>
         <fieldset class="settings__fieldset settings__fieldset_locale">
           <input
             type="radio"
@@ -194,7 +197,10 @@
         </fieldset>
       </div>
       <div class="settings__section settings__section_image-provider">
-        <p class="settings__heading settings__heading_image-provider"></p>
+        <p
+          class="settings__heading settings__heading_image-provider"
+          data-i18n="imageProviderLabel"
+        ></p>
         <fieldset class="settings__fieldset settings__fieldset_image-provider">
           <input
             type="radio"
@@ -236,10 +242,18 @@
             >Flickr</label
           >
         </fieldset>
-        <input type="text" name="image-tags" class="settings__image-tags" />
+        <input
+          type="text"
+          name="image-tags"
+          class="settings__image-tags"
+          data-i18n="imageTagsPlaceholder"
+        />
       </div>
       <div class="settings__section settings__section_widgets">
-        <p class="settings__heading settings__heading_widgets"></p>
+        <p
+          class="settings__heading settings__heading_widgets"
+          data-i18n="widgetsLabel"
+        ></p>
         <fieldset class="settings__fieldset settings__fieldset_widgets">
           <input
             type="checkbox"
@@ -250,6 +264,7 @@
           <label
             class="settings__widget-label settings__widget-label_clock"
             for="settings__widget_clock"
+            data-i18n="clockLabel"
           ></label>
           <input
             type="checkbox"
@@ -260,6 +275,7 @@
           <label
             class="settings__widget-label settings__widget-label_calendar"
             for="settings__widget_calendar"
+            data-i18n="calendarLabel"
           ></label>
           <input
             type="checkbox"
@@ -270,6 +286,7 @@
           <label
             class="settings__widget-label settings__widget-label_greeting"
             for="settings__widget_greeting"
+            data-i18n="greetingLabel"
           ></label>
           <input
             type="checkbox"
@@ -280,6 +297,7 @@
           <label
             class="settings__widget-label settings__widget-label_quote"
             for="settings__widget_quote"
+            data-i18n="qotdLabel"
           ></label>
           <input
             type="checkbox"
@@ -290,6 +308,7 @@
           <label
             class="settings__widget-label settings__widget-label_weather"
             for="settings__widget_weather"
+            data-i18n="weatherLabel"
           ></label>
           <input
             type="checkbox"
@@ -300,6 +319,7 @@
           <label
             class="settings__widget-label settings__widget-label_audio"
             for="settings__widget_audio"
+            data-i18n="audioLabel"
           ></label>
           <input
             type="checkbox"
@@ -310,6 +330,7 @@
           <label
             class="settings__widget-label settings__widget-label_tasklist"
             for="settings__widget_tasklist"
+            data-i18n="tasklistLabel"
           ></label>
         </fieldset>
       </div>
@@ -323,7 +344,7 @@
               width="41"
               height="40"
             />
-            <small>© 2022 Sergey Koksharov</small>
+            <small data-i18n="copyrightLabel"></small>
           </p>
         </a>
       </div>

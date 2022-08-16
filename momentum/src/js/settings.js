@@ -46,54 +46,23 @@ function toggleWidget(e) {
 }
 
 function localize() {
-  const localeHeading = document.querySelector('.settings__heading_locale');
-  const imageProviderHeading = document.querySelector(
-    '.settings__heading_image-provider'
-  );
-  const imageTagsInput = document.querySelector('.settings__image-tags');
-  const widgetsHeading = document.querySelector('.settings__heading_widgets');
-  const clockWidgetLabel = document.querySelector(
-    '.settings__widget-label_clock'
-  );
-  const calendarWidgetLabel = document.querySelector(
-    '.settings__widget-label_calendar'
-  );
-  const greetingWidgetLabel = document.querySelector(
-    '.settings__widget-label_greeting'
-  );
-  const quoteWidgetLabel = document.querySelector(
-    '.settings__widget-label_quote'
-  );
-  const weatherWidgetLabel = document.querySelector(
-    '.settings__widget-label_weather'
-  );
-  const audioWidgetLabel = document.querySelector(
-    '.settings__widget-label_audio'
-  );
-  const tasklistWidgetLabel = document.querySelector(
-    '.settings__widget-label_tasklist'
-  );
-  localeHeading.textContent = i18n[state.get('locale')].settings.localeLabel;
-  imageProviderHeading.textContent =
-    i18n[state.get('locale')].settings.imageProviderLabel;
-  imageTagsInput.placeholder =
-    i18n[state.get('locale')].settings.imageTagsPlaceholder;
-  const tags = JSON.parse(localStorage.getItem('imageTags'));
-  if (tags) {
-    imageTagsInput.value = tags.join(' ');
+  const settingsElems = settingsPopup.querySelectorAll('*');
+  for (let i = 0; i < settingsElems.length; i += 1) {
+    const el = settingsElems[i];
+    const i18nAttr = el.getAttribute('data-i18n');
+    if (i18nAttr) {
+      const i18nElem = el;
+      if (i18nAttr === 'imageTagsPlaceholder') {
+        i18nElem.placeholder = i18n[state.get('locale')].settings[i18nAttr];
+        const tags = JSON.parse(localStorage.getItem('imageTags'));
+        if (tags) {
+          i18nElem.value = tags.join(' ');
+        }
+      } else {
+        i18nElem.textContent = i18n[state.get('locale')].settings[i18nAttr];
+      }
+    }
   }
-  widgetsHeading.textContent = i18n[state.get('locale')].settings.widgetsLabel;
-  clockWidgetLabel.textContent = i18n[state.get('locale')].settings.clockLabel;
-  calendarWidgetLabel.textContent =
-    i18n[state.get('locale')].settings.calendarLabel;
-  greetingWidgetLabel.textContent =
-    i18n[state.get('locale')].settings.greetingLabel;
-  quoteWidgetLabel.textContent = i18n[state.get('locale')].settings.qotdLabel;
-  weatherWidgetLabel.textContent =
-    i18n[state.get('locale')].settings.weatherLabel;
-  audioWidgetLabel.textContent = i18n[state.get('locale')].settings.audioLabel;
-  tasklistWidgetLabel.textContent =
-    i18n[state.get('locale')].settings.tasklistLabel;
 }
 
 function changeLocale(locale) {

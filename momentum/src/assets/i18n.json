@@ -27,7 +27,8 @@
       "qotdLabel": "Quote of the Day",
       "weatherLabel": "Weather",
       "audioLabel": "Audio Player",
-      "tasklistLabel": "Tasklist"
+      "tasklistLabel": "Tasklist",
+      "copyrightLabel": "© 2022 Sergey Koksharov"
     }
   },
   "ru-RU": {
@@ -58,7 +59,8 @@
       "qotdLabel": "Цитата дня",
       "weatherLabel": "Погода",
       "audioLabel": "Аудиоплейер",
-      "tasklistLabel": "Список задач"
+      "tasklistLabel": "Список задач",
+      "copyrightLabel": "© 2022 Сергей Кокшаров"
     }
   }
 }
