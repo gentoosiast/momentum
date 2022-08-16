@@ -54,17 +54,14 @@ function localize() {
   for (let i = 0; i < settingsElems.length; i += 1) {
     const el = settingsElems[i];
     const i18nAttr = el.getAttribute('data-i18n');
-    if (i18nAttr) {
-      const i18nElem = el;
-      if (i18nAttr === 'imageTagsPlaceholder') {
-        i18nElem.placeholder = i18n[state.get('locale')].settings[i18nAttr];
-        const tags = JSON.parse(localStorage.getItem('imageTags'));
-        if (tags) {
-          i18nElem.value = tags.join(' ');
-        }
-      } else {
-        i18nElem.textContent = i18n[state.get('locale')].settings[i18nAttr];
+    if (i18nAttr === 'imageTagsPlaceholder') {
+      el.placeholder = i18n[state.get('locale')].settings[i18nAttr];
+      const tags = JSON.parse(localStorage.getItem('imageTags'));
+      if (tags) {
+        el.value = tags.join(' ');
       }
+    } else {
+      el.textContent = i18n[state.get('locale')].settings[i18nAttr];
     }
   }
 }
