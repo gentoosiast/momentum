@@ -179,4 +179,5 @@ export default {
       audio.volume = volumeBar.value;
     });
   },
+  pauseAudio,
 };

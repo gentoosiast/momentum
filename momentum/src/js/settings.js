@@ -1,4 +1,5 @@
 import i18n from '../assets/i18n.json';
+import audio from './audio';
 import calendar from './calendar';
 import greeting from './greeting';
 import images from './images';
@@ -40,6 +41,9 @@ function toggleWidget(e) {
     utils.showWidget(widget);
   } else {
     widgets[widgetName] = false;
+    if (widgetName === 'audio') {
+      audio.pauseAudio();
+    }
     utils.hideWidget(widget);
   }
   state.set('widgets', widgets);
