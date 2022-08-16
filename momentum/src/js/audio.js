@@ -38,7 +38,7 @@ async function playAudio() {
     playDuration.textContent = playlist[playIdx].duration;
     await audio.play();
   } catch (e) {
-    pauseAudio();
+    // do nothing, just ignore exception
   }
 }
 
