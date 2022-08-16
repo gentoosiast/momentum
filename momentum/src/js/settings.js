@@ -78,8 +78,8 @@ function localize() {
     i18n[state.get('locale')].settings.imageProviderLabel;
   imageTagsInput.placeholder =
     i18n[state.get('locale')].settings.imageTagsPlaceholder;
-  const tags = state.get('imageTags');
-  if (tags.length > 0) {
+  const tags = JSON.parse(localStorage.getItem('imageTags'));
+  if (tags) {
     imageTagsInput.value = tags.join(' ');
   }
   widgetsHeading.textContent = i18n[state.get('locale')].settings.widgetsLabel;
