@@ -24,18 +24,22 @@ function pauseAudio() {
   audio.pause();
 }
 
-function playAudio() {
-  const playlistButton = playlistItems[playIdx].querySelector(
-    '.playlist__item_button'
-  );
-  playlistButton.classList.remove('play-button');
-  playlistButton.classList.add('pause-button');
-  playlistItems[playIdx].classList.add('playlist__item_active');
-  seekBarTrackName.textContent = playlist[playIdx].title;
-  playPauseBtn.classList.remove('play-button');
-  playPauseBtn.classList.add('pause-button');
-  playDuration.textContent = playlist[playIdx].duration;
-  audio.play();
+async function playAudio() {
+  try {
+    const playlistButton = playlistItems[playIdx].querySelector(
+      '.playlist__item_button'
+    );
+    playlistButton.classList.remove('play-button');
+    playlistButton.classList.add('pause-button');
+    playlistItems[playIdx].classList.add('playlist__item_active');
+    seekBarTrackName.textContent = playlist[playIdx].title;
+    playPauseBtn.classList.remove('play-button');
+    playPauseBtn.classList.add('pause-button');
+    playDuration.textContent = playlist[playIdx].duration;
+    await audio.play();
+  } catch (e) {
+    pauseAudio();
+  }
 }
 
 function playPause() {
