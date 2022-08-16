@@ -50,7 +50,7 @@ function toggleWidget(e) {
 }
 
 function localize() {
-  const settingsElems = settingsPopup.querySelectorAll('*');
+  const settingsElems = settingsPopup.querySelectorAll('[data-i18n]');
   for (let i = 0; i < settingsElems.length; i += 1) {
     const el = settingsElems[i];
     const i18nAttr = el.getAttribute('data-i18n');
