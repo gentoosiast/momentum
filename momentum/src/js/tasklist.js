@@ -4,9 +4,7 @@ import state from './state';
 let tasks = state.get('tasks'); // { id: 34423423, completed: false, name: 'some task' }
 const tasklistInput = document.querySelector('.taskslist-widget__input');
 const tasklistTasks = document.querySelector('.tasklist-widget__tasks');
-const tasklistClearBtn = document.querySelector(
-  '.tasklist-widget__input-button'
-);
+const tasklistClearBtn = document.querySelector('.tasklist-widget__clear');
 
 function tasklistTasksUpdateScroll() {
   tasklistTasks.scrollTop = tasklistTasks.scrollHeight;
